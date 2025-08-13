@@ -153,11 +153,6 @@ var WildRydes = window.WildRydes || {};
             alert('Passwords do not match');
         }
     }
-    function getSecretHash(username, clientId, clientSecret) {
-      return createHmac('sha256', clientSecret)
-        .update(username + clientId)
-        .digest('base64');
-    }
 
     function handleVerify(event) {
         var email = $('#emailInputVerify').val();
@@ -176,4 +171,5 @@ var WildRydes = window.WildRydes || {};
         );
     }
 }(jQuery));
+
 
